@@ -7,7 +7,7 @@ const Navbar = () => {
             <a href="#home" className="flex items-center gap-2">
                 <p>Lord Of Drinks</p>
             </a>
-
+            
             <ul>
                 {navLinks.map((link)=> (
                     <li key={link.id}>
