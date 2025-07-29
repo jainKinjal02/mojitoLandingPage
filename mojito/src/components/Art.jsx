@@ -1,5 +1,5 @@
 import React from 'react'
-import { goodLists } from '../../constants'
+import { featureLists, goodLists } from '../../constants'
 
 const Art = () => {
   return (
@@ -10,7 +10,7 @@ const Art = () => {
             <div className='content'>
                 <ul className='space-y-4 will-fade'>
                     {goodLists.map((feature,index)=> (
-                        <li key={index} className='flex intems-center gap-2'>
+                        <li key={index} className='flex items-center gap-2'>
                             <img src="/images/check.png" alt="check" />
                             <p>{feature}</p>
                         </li>
@@ -22,6 +22,23 @@ const Art = () => {
                         alt="cocktail"
                         className='abs-center masked-img size-full object-contain'/>
                 </div>
+                <ul className='space-y-4 will-fade'>
+                    {featureLists.map((feature,index)=> (
+                        <li key={index} className='flex items-center justify-start gap-2'>
+                            <img src="/images/check.png" alt="check" />
+                            <p className='md:w-fit w-60'>{feature}</p>
+                        </li>
+                    ))}
+                </ul>
+
+            </div>
+
+            <div className='masked-container'>
+                    <h2 className='will-fade'>Sip Worthy Perfection</h2>
+                    <div id="masked-content">
+                        <h3>Made with Craft, Poured with Passion</h3>
+                        <p>This isn't just a drink. It's a carefully crafted moment made just for you.</p>
+                    </div>
             </div>
         </div>
     </div>
