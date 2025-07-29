@@ -16,6 +16,12 @@ const Art = () => {
                         </li>
                     ))}
                 </ul>
+
+                <div className='cocktail-img'>
+                    <img src="/images/under-img.jpg" 
+                        alt="cocktail"
+                        className='abs-center masked-img size-full object-contain'/>
+                </div>
             </div>
         </div>
     </div>
