@@ -1,4 +1,5 @@
 import React from 'react'
+import { openingHours, socials } from '../../constants'
 
 const Contact = () => {
   return (
@@ -11,6 +12,34 @@ const Contact = () => {
 
             <div>
                 <h3>Visit Out Store</h3>
+                <p>
+                   456, Los Angeles, California 
+                </p>
+            </div>
+
+            <div>
+                <h3>Contact Us</h3>
+                <p>(555) 987-6543</p>
+                <p>jainkinjal021196@gmail.com</p>
+            </div>
+
+            <div>
+                <h3>Open Every Day</h3>
+                {openingHours.map((time)=> (
+                    <p key={time.day}>
+                        {time.day} : {time.time}
+                    </p>
+                ))}
+            </div>
+            <div >
+                <h3>Socials</h3>
+                <div className='flex-center gap-5'>
+                    {socials.map((social) => (
+                        <a key={social.name} href={social.url} target="_blank" rel="noopener noreferrer"  aria-label={social.name}>
+                            <img src={social.icon} />
+                        </a>
+                    ))}
+                </div>
             </div>
         </div>
     </footer>
